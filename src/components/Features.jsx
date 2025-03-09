@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { TfiLocationArrow } from "react-icons/tfi";
+import PixelCard from "../blocks/Components/PixelCard/PixelCard";
 
 export const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
@@ -153,14 +154,16 @@ const Features = () => (
           />
         </BentoTilt>
 
-        <BentoTilt className="bento-tilt_2">
+        <BentoTilt className="bento-tilt_2 row-span-1  md:col-span-1 md:ms-0">
           <a href="https://docs.google.com/forms/d/1bzdTdtWYxA9HcTdyM347yyCdFkfyXGcUlSvVM-XJYyM/edit" target="_blank" rel="noopener noreferrer">
             <div className="flex size-full flex-row-reverse justify-between bg-[#a26bdb] p-5">
-              <h1 className="bento-title special-font max-w-64 text-black">
-                Think<b> of</b> more <b>feat</b>ures t<b>o</b> build.
-              </h1>
+              <PixelCard variant="yellow">
+                <h1 className="bento-title special-font max-w-64 text-black">
+                  Think<b> of</b> more <b>feat</b>ures t<b>o</b> build.
+                </h1>
 
-              <TfiLocationArrow className="m-5 scale-[5] self-end" />
+                <TfiLocationArrow className="m-5 scale-[5] self-end" />
+              </PixelCard>
             </div>
           </a>
         </BentoTilt>
